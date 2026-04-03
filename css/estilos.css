@@ -1,0 +1,24 @@
+body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+
+.hero-gradient { 
+    background: linear-gradient(135deg, #001e40 0%, #003366 100%); 
+}
+
+.glass-nav { 
+    background: rgba(255, 255, 255, 0.90); 
+    backdrop-filter: blur(16px); 
+}
+
+/* Reveal animation */
+.reveal { transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; transform: translateY(20px); }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* Custom Accordion transition */
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
+.accordion-item.active .accordion-content { max-height: 200px; }
+.accordion-item.active .accordion-icon { transform: rotate(180deg); }
+
+.text-balance { text-wrap: balance; }
+
+::selection { background-color: #45c5ff; color: #001e40; }

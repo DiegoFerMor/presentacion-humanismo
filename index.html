@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Experto en Humanismo y Bienestar Profesional | Hygeia Hub</title>
+    
+    <!-- Fonts: Manrope (Display) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons: Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#001e40",    // Navy Authority
+                        brandPrimary: "#001e40",
+                        secondary: "#00668a",  // Action Blue
+                        accent: "#45c5ff",     // Highlight
+                        surface: "#f7f9fb",
+                        "surface-low": "#f2f4f6",
+                        "surface-lowest": "#ffffff",
+                        "on-surface": "#191c1e",
+                        outline: "#737780",
+                    },
+                    fontFamily: {
+                        headline: ["Manrope", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    letterSpacing: {
+                        ultra: "-0.02em",
+                        stately: "0.2em",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="bg-surface text-on-surface">
+
+    <!-- Header / Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-surface-low shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-6 h-24 lg:h-28 flex justify-between items-center transition-all">
+            <!-- Brand -->
+            <div class="flex items-center gap-4 md:gap-8">
+                <!-- Logo Hygeia extra grande -->
+                <img src="./logos/logo_hygeia.png" alt="Hygeia Logo" class="h-16 lg:h-20 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/400x150/transparent/001e40?text=Hygeia'">
+                
+                <!-- Separador y Logo MHI extra grande -->
+                <div class="hidden md:flex items-center border-l border-outline/30 pl-4 md:pl-8">
+                    <img src="./logos/logo_MHI.png" alt="Movimiento Hipocrático" class="h-14 lg:h-16 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/400x150/transparent/001e40?text=MHI'">
+                </div>
+            </div>
+            
+            <!-- Links -->
+            <div class="hidden lg:flex items-center gap-10">
+                <a href="#proposito" class="text-sm font-semibold text-primary hover:text-secondary transition-colors uppercase tracking-widest text-[11px]">Propósito</a>
+                <a href="#sinergia" class="text-sm font-semibold text-primary hover:text-secondary transition-colors uppercase tracking-widest text-[11px]">Sinergia</a>
+                <a href="#programa" class="text-sm font-semibold text-primary hover:text-secondary transition-colors uppercase tracking-widest text-[11px]">Programa</a>
+                <a href="#avales" class="text-sm font-semibold text-primary hover:text-secondary transition-colors uppercase tracking-widest text-[11px]">Autoridad</a>
+            </div>
+            
+            <!-- CTA -->
+            <a href="mailto:institucional@hygeiahub.org" class="bg-secondary text-white px-6 py-2.5 rounded-md font-bold text-xs uppercase tracking-widest hover:brightness-110 transition-all shadow-md">
+                Agendar Reunión
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Section: Hero (Cabecera) -->
+        <header class="hero-gradient relative min-h-screen flex items-center pt-28 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10 w-full">
+                <div class="lg:col-span-8 space-y-10 reveal">
+                    <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 mb-4">
+                        <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-white/90">Edición 2026</span>
+                    </div>
+                    
+                    <h1 class="flex flex-col gap-2 md:gap-4">
+                        <span class="text-xl md:text-2xl lg:text-3xl font-medium text-white/90 tracking-wide leading-snug max-w-4xl">
+                            Curso Experto en Humanismo y Bienestar Profesional en la Medicina del Siglo XXI:
+                        </span>
+                        <span class="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.05] tracking-ultra text-balance mt-2">
+                            Entre Hipócrates <br>
+                            <span class="text-accent italic font-medium">y el Algoritmo.</span>
+                        </span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-2xl text-white/70 max-w-2xl font-body leading-relaxed text-balance">
+                        El Renacimiento Humanista de la Medicina. Una propuesta de vanguardia para redefinir la identidad del clínico en la era tecnológica.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                        <div class="flex items-start gap-4 text-white/90">
+                            <span class="material-symbols-outlined text-accent">verified_user</span>
+                            <span class="text-xs font-semibold leading-snug">Excelencia técnica (30 ECTS) al servicio de la conexión humana.</span>
+                        </div>
+                        <div class="flex items-start gap-4 text-white/90">
+                            <span class="material-symbols-outlined text-accent">spa</span>
+                            <span class="text-xs font-semibold leading-snug">Prevención estratégica del Burnout y la fatiga por compasión.</span>
+                        </div>
+                        <div class="flex items-start gap-4 text-white/90">
+                            <span class="material-symbols-outlined text-accent">psychology</span>
+                            <span class="text-xs font-semibold leading-snug">El primer programa que integra la IA como copiloto clínico bioético.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-6 pt-6">
+                        <a href="mailto:institucional@hygeiahub.org" class="bg-secondary text-white px-8 py-4 rounded-md font-bold text-sm uppercase tracking-widest hover:brightness-110 transition-all shadow-xl flex items-center gap-3">
+                            Agendar Reunión Estratégica
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                        <a href= "memoria.pdf" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-md font-bold text-sm uppercase tracking-widest hover:bg-white/20 transition-all">
+                            Descargar Memoria Académica (PDF)
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Asymmetrical Typographic Block -->
+                <div class="hidden lg:flex lg:col-span-4 justify-end items-center relative">
+                    <div class="text-right flex flex-col items-end">
+                        <span class="text-[14vw] font-black text-white/5 leading-none select-none">HYGEIA</span>
+                        <div class="mt-[-4rem] p-8 border-r-4 border-accent bg-white/5 backdrop-blur-sm max-w-xs reveal" style="transition-delay: 0.3s;">
+                            <p class="text-white font-headline italic text-xl leading-relaxed opacity-90">
+                                "La medicina no es solo una ciencia, es un arte que requiere la mirada del alma."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Bar -->
+        <section class="bg-surface-low border-b border-outline/10 py-12">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="flex flex-col items-center text-center space-y-3 reveal">
+                        <span class="material-symbols-outlined text-secondary text-4xl">school</span>
+                        <div class="text-3xl font-extrabold text-primary">Título Propio</div>
+                        <div class="text-[10px] uppercase font-black tracking-widest text-outline">Certificación Universitaria</div>
+                    </div>
+                    <div class="flex flex-col items-center text-center space-y-3 reveal" style="transition-delay: 0.1s;">
+                        <span class="material-symbols-outlined text-secondary text-4xl">workspace_premium</span>
+                        <div class="text-3xl font-extrabold text-primary">30 ECTS</div>
+                        <div class="text-[10px] uppercase font-black tracking-widest text-outline">Créditos Europeos</div>
+                    </div>
+                    <div class="flex flex-col items-center text-center space-y-3 reveal" style="transition-delay: 0.2s;">
+                        <span class="material-symbols-outlined text-secondary text-4xl">timer</span>
+                        <div class="text-3xl font-extrabold text-primary">725 Horas</div>
+                        <div class="text-[10px] uppercase font-black tracking-widest text-outline">Carga Lectiva</div>
+                    </div>
+                    <div class="flex flex-col items-center text-center space-y-3 reveal" style="transition-delay: 0.3s;">
+                        <span class="material-symbols-outlined text-secondary text-4xl">calendar_month</span>
+                        <div class="text-3xl font-extrabold text-primary">12 Meses</div>
+                        <div class="text-[10px] uppercase font-black tracking-widest text-outline">Duración del Programa</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: El Desafío (Paradoja) -->
+        <section id="proposito" class="py-32 bg-surface-lowest">
+            <div class="max-w-4xl mx-auto px-6 space-y-12 text-center reveal">
+                <div class="w-16 h-1.5 bg-secondary mx-auto mb-8"></div>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-primary leading-tight tracking-ultra">
+                    La Paradoja de la Modernidad: <br> Más Precisión, Menos Presencia.
+                </h2>
+                <h3 class="text-xl md:text-2xl text-secondary font-bold uppercase tracking-widest italic opacity-80">
+                    El impacto silente de la tecnificación en la salud del profesional sanitario.
+                </h3>
+                <div class="text-xl md:text-2xl text-on-surface leading-loose font-body font-light text-balance text-left md:text-center mt-12 bg-surface-low p-10 rounded-2xl border border-outline/5 shadow-sm italic text-primary/80">
+                    "La medicina contemporánea vive una contradicción histórica. Mientras la Inteligencia Artificial y la hiper-especialización elevan la exactitud diagnóstica a niveles nunca vistos, el clínico experimenta un alejamiento de su vocación originaria. Este escenario no solo afecta la calidad del cuidado, sino que es el principal motor del agotamiento profesional y el desgaste moral sistémico."
+                </div>
+                <p class="text-lg text-primary font-black uppercase tracking-[0.3em] pt-8">Propugnamos una medicina donde el algoritmo no sustituye la mirada, sino que la libera.</p>
+                <div class="pt-10">
+                    <a href="#" class="text-secondary font-bold text-xs uppercase tracking-widest border-b-2 border-secondary pb-1 hover:opacity-70 transition-opacity flex items-center gap-2 justify-center w-fit mx-auto">
+                        Explorar la justificación académica
+                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Público Objetivo (Impacto Transversal) -->
+        <section class="py-32 bg-primary text-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-20 text-center reveal">
+                    <span class="text-accent text-[11px] font-black uppercase tracking-[0.4em] mb-4 block">Ecosistema Hospitalario</span>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6 tracking-ultra">Cuidar al que Cuida: Un Compromiso Institucional.</h2>
+                    <p class="text-white/60 text-lg uppercase font-bold tracking-[0.2em] italic">De la formación residente a la dirección de servicio.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- MIR -->
+                    <div class="p-8 border border-white/10 rounded-xl space-y-6 reveal">
+                        <span class="text-[10px] font-black text-accent tracking-stately">PERFIL 01</span>
+                        <h4 class="text-2xl font-black">Médicos MIR</h4>
+                        <p class="text-sm text-white/50 leading-relaxed italic">Blindando su vocación desde el inicio frente al choque con la realidad sistémica.</p>
+                    </div>
+                    <!-- Especialistas -->
+                    <div class="p-8 border border-white/10 rounded-xl space-y-6 reveal" style="transition-delay: 0.1s;">
+                        <span class="text-[10px] font-black text-accent tracking-stately">PERFIL 02</span>
+                        <h4 class="text-2xl font-black">Especialistas</h4>
+                        <p class="text-sm text-white/50 leading-relaxed italic">Proveyendo herramientas de resiliencia diaria para prevenir la fatiga por compasión.</p>
+                    </div>
+                    <!-- Tutores -->
+                    <div class="p-8 border border-white/10 rounded-xl space-y-6 reveal" style="transition-delay: 0.2s;">
+                        <span class="text-[10px] font-black text-accent tracking-stately">PERFIL 03</span>
+                        <h4 class="text-2xl font-black">Tutores FSE</h4>
+                        <p class="text-sm text-white/50 leading-relaxed italic">Capacitándoles para liderar desde un humanismo que inspire a las nuevas generaciones.</p>
+                    </div>
+                    <!-- Direcciones -->
+                    <div class="p-8 border border-white/10 rounded-xl space-y-6 reveal" style="transition-delay: 0.3s;">
+                        <span class="text-[10px] font-black text-accent tracking-stately">PERFIL 04</span>
+                        <h4 class="text-2xl font-black">Direcciones</h4>
+                        <p class="text-sm text-white/50 leading-relaxed italic">Facilitando la gestión de equipos basada en la sostenibilidad del talento humano.</p>
+                    </div>
+                </div>
+                <div class="mt-20 text-center">
+                   <a href="#" class="text-accent font-bold text-xs uppercase tracking-widest border-b border-accent pb-1 hover:brightness-110">Ver impacto detallado por perfiles</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Sinergia Institucional (Foco EAPS) -->
+        <section id="sinergia" class="py-40 bg-white relative overflow-hidden">
+            <div class="absolute right-0 top-0 text-[30vw] font-black text-surface-low leading-none select-none -z-0 opacity-40 translate-x-1/2 -translate-y-1/4">EAPS</div>
+            <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <span class="text-secondary font-black text-[11px] uppercase tracking-[0.5em] mb-4 block">Sinergia Estratégica</span>
+                    <h2 class="text-5xl md:text-7xl font-black text-primary leading-none tracking-ultra mb-8">Excelencia en el Acompañamiento.</h2>
+                    <h3 class="text-2xl font-bold italic text-secondary mb-10">Sinergia con el Modelo EAPS.</h3>
+                    <p class="text-xl text-on-surface/70 leading-relaxed border-l-4 border-secondary pl-8 py-4 italic font-medium">
+                        "Nuestra propuesta académica expande el horizonte de los Equipos de Atención Psicosocial (EAPS). Al profundizar en el manejo multidimensional del 'Dolor Total', dotamos a los profesionales de la solvencia necesaria para el acompañamiento en el final de la vida."
+                    </p>
+                    <div class="pt-12">
+                        <a href="#programa" class="bg-primary text-white px-8 py-4 rounded-md font-bold text-sm uppercase tracking-widest hover:bg-secondary transition-all shadow-lg inline-flex items-center gap-4">
+                            Descubrir módulo de Acompañamiento
+                            <span class="material-symbols-outlined text-sm">visibility</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="space-y-10 reveal" style="transition-delay: 0.2s;">
+                    <div class="bg-surface-low p-10 rounded-3xl border border-outline/5">
+                        <h4 class="text-primary font-black text-2xl mb-4">Fortaleciendo la respuesta ante el Sufrimiento Total.</h4>
+                        <p class="text-on-surface/60 leading-relaxed">
+                            Aseguramos la integridad emocional de quienes sostienen el final de la vida, protegiéndoles frente al estrés traumático secundario mediante técnicas de autoconsciencia y resiliencia institucional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Itinerario Académico (Módulos - Accordion) -->
+        <!-- Itinerario de Excelencia (REDISEÑADO CON TEMAS) -->
+        <section id="programa" class="py-32 bg-surface-low">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-20 text-center reveal">
+                    <span class="text-secondary font-black text-[11px] uppercase tracking-[0.5em] mb-4 block font-headline">Itinerario de Excelencia</span>
+                    <h2 class="text-4xl md:text-6xl font-black text-primary tracking-ultra">Un Recorrido por la Identidad Clínica Moderna.</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                    <!-- Sidebar Informativo -->
+                    <div class="lg:col-span-4 sticky top-32 reveal">
+                        <p class="text-lg font-bold text-primary mb-6 uppercase tracking-[0.2em] italic">6 Módulos diseñados para la práctica real.</p>
+                        <p class="text-on-surface/50 leading-relaxed text-sm italic border-l border-outline/30 pl-6 mb-8">Estructura el curso como una respuesta por capas a las causas del agotamiento médico y la deshumanización asistencial.</p>
+                        
+                        <div class="bg-white p-6 rounded-xl border border-outline/10 shadow-sm space-y-4">
+                            <div class="flex items-center gap-4">
+                                <span class="bg-secondary/10 p-2 rounded-lg text-secondary material-symbols-outlined text-sm">menu_book</span>
+                                <span class="text-[10px] font-black uppercase tracking-widest text-primary/80">30 ECTS Certificados</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="bg-secondary/10 p-2 rounded-lg text-secondary material-symbols-outlined text-sm">verified</span>
+                                <span class="text-[10px] font-black uppercase tracking-widest text-primary/80">Aval Académico CEU</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Acordeones con Temario -->
+                    <div class="lg:col-span-8 space-y-4 reveal">
+                        
+                        <!-- Módulo 1 -->
+                        <div class="accordion-item bg-white rounded-xl overflow-hidden border border-outline/5 transition-all shadow-sm">
+                            <button class="w-full px-8 py-8 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
+                                <div class="flex items-center gap-6">
+                                    <span class="text-[10px] font-black text-outline tracking-stately">01</span>
+                                    <h4 class="text-xl font-bold text-primary">El retorno a las fuentes. Valores de Medicina</h4>
+                                </div>
+                                <span class="material-symbols-outlined text-secondary accordion-icon transition-transform">expand_more</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="px-8 pb-8 pt-0 ml-12">
+                                    <p class="text-on-surface/70 leading-relaxed italic border-l-2 border-secondary/20 pl-6 h-fit py-1 mb-6">
+                                        Redescubrir la fides hipocrática frente a la deshumanización técnica y los retos bioéticos contemporáneos.
+                                    </p>
+                                    <div class="bg-surface-low rounded-xl p-6 border border-outline/10">
+                                        <h5 class="text-[10px] font-black uppercase tracking-stately text-secondary mb-4">Programa Académico</h5>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Porqué Hipócrates en el S.XXI</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Antropología Médica: De la Biología a la Biografía</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> El Juramento Hipocrático: Vigencia y Actualización</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> La Relación Médico-Paciente como "Amistad Médica"</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> La Excelencia Técnica como Deber Ético</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Módulo 2 -->
+                        <div class="accordion-item bg-white rounded-xl overflow-hidden border border-outline/5 transition-all shadow-sm">
+                            <button class="w-full px-8 py-8 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
+                                <div class="flex items-center gap-6">
+                                    <span class="text-[10px] font-black text-outline tracking-stately">02</span>
+                                    <h4 class="text-xl font-bold text-primary">Comunicación y relación clínica</h4>
+                                </div>
+                                <span class="material-symbols-outlined text-secondary accordion-icon transition-transform">expand_more</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="px-8 pb-8 pt-0 ml-12">
+                                    <p class="text-on-surface/70 leading-relaxed italic border-l-2 border-secondary/20 pl-6 h-fit py-1 mb-6">
+                                        Maestría en comunicación clínica, protocolos de malas noticias y optimización de la toma de decisiones compartidas.
+                                    </p>
+                                    <div class="bg-surface-low rounded-xl p-6 border border-outline/10">
+                                        <h5 class="text-[10px] font-black uppercase tracking-stately text-secondary mb-4">Programa Académico</h5>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> La Entrevista Clínica Avanzada</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Protocolos de Comunicación de Malas Noticias</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Comunicación No Verbal y Gestión del Silencio</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> El Paciente "Difícil" y la Gestión de Conflictos</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Toma de Decisiones Compartida (SDM)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Módulo 3 -->
+                        <div class="accordion-item bg-white rounded-xl overflow-hidden border border-outline/5 transition-all shadow-sm">
+                            <button class="w-full px-8 py-8 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
+                                <div class="flex items-center gap-6">
+                                    <span class="text-[10px] font-black text-outline tracking-stately">03</span>
+                                    <h4 class="text-xl font-bold text-primary">El final de la vida y el sufrimiento</h4>
+                                </div>
+                                <span class="material-symbols-outlined text-secondary accordion-icon transition-transform">expand_more</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="px-8 pb-8 pt-0 ml-12">
+                                    <p class="text-on-surface/70 leading-relaxed italic border-l-2 border-secondary/20 pl-6 h-fit py-1 mb-6">
+                                        Abordaje integral del Sufrimiento Total y el imperativo ético de consolar en escenarios de alta intensidad emocional.
+                                    </p>
+                                    <div class="bg-surface-low rounded-xl p-6 border border-outline/10">
+                                        <h5 class="text-[10px] font-black uppercase tracking-stately text-secondary mb-4">Programa Académico</h5>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Cuidados Paliativos vs. Obstinación Terapéutica</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> El Dolor Total (Total Pain)</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Acompañamiento Espiritual en la Clínica</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Comunicación con la Familia y Gestión del Duelo</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Voluntades Anticipadas y Planificación de Cuidado</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Módulo 4 -->
+                        <div class="accordion-item bg-white rounded-xl overflow-hidden border border-outline/5 transition-all shadow-sm">
+                            <button class="w-full px-8 py-8 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
+                                <div class="flex items-center gap-6">
+                                    <span class="text-[10px] font-black text-outline tracking-stately">04</span>
+                                    <h4 class="text-xl font-bold text-primary">Bienestar del Profesional Médico</h4>
+                                </div>
+                                <span class="material-symbols-outlined text-secondary accordion-icon transition-transform">expand_more</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="px-8 pb-8 pt-0 ml-12">
+                                    <p class="text-on-surface/70 leading-relaxed italic border-l-2 border-secondary/20 pl-6 h-fit py-1 mb-6">
+                                        Medicina del estilo de vida y prevención activa del Burnout mediante estrategias de resiliencia personal e institucional.
+                                    </p>
+                                    <div class="bg-surface-low rounded-xl p-6 border border-outline/10">
+                                        <h5 class="text-[10px] font-black uppercase tracking-stately text-secondary mb-4">Programa Académico</h5>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> El "Sanador Herido": Vulnerabilidad y Límites</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Burnout y Fatiga por Compasión</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> El Error Médico y las Segundas Víctimas</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Trabajo en Equipo y Liderazgo Humanista</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Resiliencia, Vocación y Sentido</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Módulo 5 -->
+                        <div class="accordion-item bg-white rounded-xl overflow-hidden border border-outline/5 transition-all shadow-sm">
+                            <button class="w-full px-8 py-8 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
+                                <div class="flex items-center gap-6">
+                                    <span class="text-[10px] font-black text-outline tracking-stately">05</span>
+                                    <h4 class="text-xl font-bold text-primary">El Médico y el Algoritmo</h4>
+                                </div>
+                                <span class="material-symbols-outlined text-secondary accordion-icon transition-transform">expand_more</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="px-8 pb-8 pt-0 ml-12">
+                                    <p class="text-on-surface/70 leading-relaxed italic border-l-2 border-secondary/20 pl-6 h-fit py-1 mb-6">
+                                        Bioética algorítmica y la Inteligencia Artificial como aliada humanista para liberar el tiempo de cuidado asistencial.
+                                    </p>
+                                    <div class="bg-surface-low rounded-xl p-6 border border-outline/10">
+                                        <h5 class="text-[10px] font-black uppercase tracking-stately text-secondary mb-4">Programa Académico</h5>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> La IA como Aliada del Juramento Hipocrático</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Recuperar la Mirada: La IA en la Consulta Diaria.</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Precisión Diagnóstica, Incertidumbre y Evidencia</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Integración Tecnológica y Responsabilidad Moral</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Lo Irreemplazable: El Arte de Curar en la Era Digital</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Módulo 6 -->
+                        <div class="accordion-item bg-white rounded-xl overflow-hidden border border-outline/5 transition-all shadow-sm">
+                            <button class="w-full px-8 py-8 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
+                                <div class="flex items-center gap-6">
+                                    <span class="text-[10px] font-black text-outline tracking-stately">06</span>
+                                    <h4 class="text-xl font-bold text-primary">Medicina Narrativa y Emociones</h4>
+                                </div>
+                                <span class="material-symbols-outlined text-secondary accordion-icon transition-transform">expand_more</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="px-8 pb-8 pt-0 ml-12">
+                                    <p class="text-on-surface/70 leading-relaxed italic border-l-2 border-secondary/20 pl-6 h-fit py-1 mb-6">
+                                        La sensibilidad artística y las artes como herramientas de observación clínica superior y gestión emocional.
+                                    </p>
+                                    <div class="bg-surface-low rounded-xl p-6 border border-outline/10">
+                                        <h5 class="text-[10px] font-black uppercase tracking-stately text-secondary mb-4">Programa Académico</h5>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Introducción a la Medicina Narrativa</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Patografías: La Enfermedad Contada por el Paciente</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Cinefórum Médico: La Mirada del Otro</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Escritura Reflexiva y el "Diario del Médico"</li>
+                                            <li class="flex items-start gap-3 text-sm text-primary/80"><span class="material-symbols-outlined text-accent text-[18px]">play_arrow</span> Humanidades Médicas: Arte y Literatura</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Metodología Inmersiva -->
+        <section class="py-40 bg-white">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <div class="space-y-12 reveal">
+                    <div>
+                        <span class="text-secondary font-black text-[11px] uppercase tracking-[0.6em] mb-4 block">Eficacia Formativa</span>
+                        <h2 class="text-5xl font-black text-primary tracking-ultra">Metodología Lean: Alto Impacto, Tiempo Optimizado.</h2>
+                    </div>
+                    <p class="text-lg text-on-surface/60 font-body leading-relaxed">Huimos de la teoría estática. Nuestra metodología combina el rigor académico con formatos audiovisuales premium diseñados para integrarse en la saturada agenda del clínico.</p>
+                    
+                    <ul class="space-y-10">
+                        <li class="flex gap-6 group">
+                            <div class="bg-surface-low p-4 h-fit rounded-lg group-hover:bg-secondary group-hover:text-white transition-all shadow-sm">
+                                <span class="material-symbols-outlined">theater_comedy</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-primary mb-2">Role Play Audiovisual</h4>
+                                <p class="text-sm text-on-surface/50 leading-relaxed italic">Entrenamiento en situaciones clínicas críticas con feedback experto y análisis inmersivo.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-6 group">
+                            <div class="bg-surface-low p-4 h-fit rounded-lg group-hover:bg-secondary group-hover:text-white transition-all shadow-sm">
+                                <span class="material-symbols-outlined">auto_stories</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-primary mb-2">Contenidos de Clase Mundial</h4>
+                                <p class="text-sm text-on-surface/50 leading-relaxed italic">Recursos integrados de la Universidad de Stanford y la British Medical Association (BMA).</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-6 group">
+                            <div class="bg-surface-low p-4 h-fit rounded-lg group-hover:bg-secondary group-hover:text-white transition-all shadow-sm">
+                                <span class="material-symbols-outlined">bolt</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-primary mb-2">Flexibilidad Sistémica</h4>
+                                <p class="text-sm text-on-surface/50 leading-relaxed italic">Micro-cápsulas de conocimiento de alto impacto académico optimizadas para agendas asistenciales.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="inline-flex items-center gap-4 text-xs font-black uppercase tracking-widest text-secondary hover:opacity-70 transition-opacity">
+                        Ver demo metodológica
+                        <span class="material-symbols-outlined text-sm">play_circle</span>
+                    </a>
+                </div>
+                
+                <div class="flex flex-col items-center justify-center gap-16 mt-12 lg:mt-32 reveal" style="transition-delay: 0.2s;">
+                    <!-- Logo BMA (Arriba) -->
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./logos/logo_BMA.png" alt="BMA" class="h-24 md:h-32 w-auto mb-6" onerror="this.onerror=null; this.src='https://placehold.co/300x150/transparent/001e40?text=BMA'">
+                        <span class="text-[10px] font-black text-outline/50 uppercase tracking-[0.3em]">Estándar de Calidad</span>
+                    </div>
+                    
+                    <!-- Logo Stanford (Abajo) -->
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./logos/logo_stanford.png" alt="Stanford Medicine" class="h-24 md:h-32 w-auto mb-6" onerror="this.onerror=null; this.src='https://placehold.co/300x150/transparent/001e40?text=Stanford'">
+                        <span class="text-[10px] font-black text-outline/50 uppercase tracking-[0.3em]">Referente Académico</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Gobernanza y Autoridad -->
+        <section id="avales" class="py-40 bg-surface-low">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-24 text-center reveal">
+                    <span class="text-secondary font-black text-[11px] uppercase tracking-[0.8em] mb-4 block">Legitimidad Académica</span>
+                    <h2 class="text-4xl md:text-6xl font-black text-primary tracking-ultra">Estructura de Gobernanza y Autoridad.</h2>
+                    <p class="text-lg text-primary/40 font-bold uppercase tracking-[0.2em] mt-6 italic">Un cuadro docente que lidera la medicina española.</p>
+                </div>
+                
+                <!-- Directors -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-32">
+                    <div class="bg-white p-10 rounded-2xl border border-outline/5 shadow-sm reveal">
+                        <span class="text-[9px] font-black text-secondary tracking-widest uppercase mb-4 block">Director de Programa</span>
+                        <h4 class="text-2xl font-black text-primary mb-3">Dr. Tomás Chivato Pérez</h4>
+                        <p class="text-xs font-bold text-outline opacity-70">Decano Facultad Medicina CEU San Pablo.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-2xl border border-outline/5 shadow-sm reveal" style="transition-delay: 0.1s;">
+                        <span class="text-[9px] font-black text-secondary tracking-widest uppercase mb-4 block">Director de Programa</span>
+                        <h4 class="text-2xl font-black text-primary mb-3">Dr. Juan Antonio Vargas Núñez</h4>
+                        <p class="text-xs font-bold text-outline opacity-70">Decano Facultad Medicina UAM.</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-2xl border border-outline/5 shadow-sm reveal" style="transition-delay: 0.2s;">
+                        <span class="text-[9px] font-black text-secondary tracking-widest uppercase mb-4 block">Director de Programa</span>
+                        <h4 class="text-2xl font-black text-primary mb-3">Dr. Eduardo de Teresa Galván</h4>
+                        <p class="text-xs font-bold text-outline opacity-70">Prof. Emérito Facultad de Medicina UMA.</p>
+                    </div>
+                </div>
+                
+                <!-- Coordinators List (Clean Grid) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-10 border-t border-outline/10 pt-20">
+                    <div class="reveal">
+                        <h5 class="text-lg font-bold text-primary mb-1">Dr. Antonio Pilas Mesa</h5>
+                        <p class="text-[10px] text-outline italic">Master Psicología General Sanitaria. CEU San Pablo.</p>
+                    </div>
+                    <div class="reveal">
+                        <h5 class="text-lg font-bold text-primary mb-1">Dr. Arcadi Gual</h5>
+                        <p class="text-[10px] text-outline italic">Rector de la Universitat Abat Oliba CEU.</p>
+                    </div>
+                    <div class="reveal">
+                        <h5 class="text-lg font-bold text-primary mb-1">Dr. Juan José Rodríguez Sendin</h5>
+                        <p class="text-[10px] text-outline italic">Presidente de la Organización Médica Colegial.</p>
+                    </div>
+                    <div class="reveal">
+                        <h5 class="text-lg font-bold text-primary mb-1">Dr. Pere Gascón</h5>
+                        <p class="text-[10px] text-outline italic">Co-Director Oncol. Molecular. U. Barcelona.</p>
+                    </div>
+                    <div class="reveal">
+                        <h5 class="text-lg font-bold text-primary mb-1">Dra. Pilar López</h5>
+                        <p class="text-[10px] text-outline italic">Prof. Titular Psiquiatría. U. Autónoma Madrid.</p>
+                    </div>
+                    <div class="reveal">
+                        <h5 class="text-lg font-bold text-primary mb-1">Dr. Javier Segovia</h5>
+                        <p class="text-[10px] text-outline italic">Jefe Cardiología. Hosp. Puerta de Hierro.</p>
+                    </div>
+                    <div class="reveal">
+                        <h5 class="text-lg font-bold text-primary mb-1">Dra. Andrea Kallmeyer</h5>
+                        <p class="text-[10px] text-outline italic">Oncología. Hosp. U. Fundación Jiménez Díaz.</p>
+                    </div>
+                    <div class="reveal">
+                        <h5 class="text-lg font-bold text-primary mb-1">Dr. Valerio Rocco</h5>
+                        <p class="text-[10px] text-outline italic">Director del Círculo de Bellas Artes de Madrid.</p>
+                    </div>
+                    <div class="reveal">
+                        <h5 class="text-lg font-bold text-primary mb-1">Dr. José María Torres Campa</h5>
+                        <p class="text-[10px] text-outline italic">Coord. Neurocirugía. Centro Médico Asturias.</p>
+                    </div>
+                </div>
+                
+                <!-- Institutional Seals -->
+                <div class="mt-32 flex flex-wrap justify-center items-center gap-16 md:gap-24 reveal">
+                    <img src="./logos/logo_CEU.jpeg" alt="CEU" class="h-16 md:h-20 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x150/transparent/001e40?text=CEU'">
+                    <img src="./logos/logo_seom.png" alt="SEOM" class="h-14 md:h-18 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x150/transparent/001e40?text=SEOM'">
+                    <img src="./logos/logo_semi.png" alt="SEMI" class="h-16 md:h-20 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x150/transparent/001e40?text=SEMI'">
+                    <img src="./logos/logo_semfyc.png" alt="semFYC" class="h-16 md:h-20 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x150/transparent/001e40?text=semFYC'">
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Conversion Block (REDESIGNED & LEFT-ALIGNED NO-NOISE) -->
+        <section class="py-40 hero-gradient reveal relative overflow-hidden border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-6 relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                
+                <!-- Bloque Izquierdo: Copy y CTA -->
+                <div class="flex flex-col items-start text-left">
+                    <!-- Titular elegante -->
+                    <h2 class="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight tracking-ultra italic mb-8">
+                        Efecto <br class="hidden lg:block"><span class="text-accent">Hygeia.</span>
+                    </h2>
+                    
+                    <!-- Texto descriptivo adaptado al fondo oscuro -->
+                    <p class="max-w-xl text-2xl md:text-3xl font-light text-white/90 leading-snug text-balance italic mb-12">
+                        Buscamos una alianza estratégica por la sostenibilidad del talento médico y la excelencia de la atención humana.
+                    </p>
+                    
+                    <div class="flex flex-col items-start gap-10">
+                        <!-- Botón de alto contraste -->
+                        <a href="mailto:institucional@hygeiahub.org" class="bg-accent text-primary px-10 py-5 rounded-md font-extrabold text-sm uppercase tracking-widest hover:bg-white hover:scale-105 transition-all shadow-2xl flex items-center gap-4">
+                            Agendar Sesión Institucional
+                            <span class="material-symbols-outlined">send</span>
+                        </a>
+                        
+                        <!-- Metadatos institucionales -->
+                        <div class="flex flex-wrap gap-x-6 gap-y-3 text-[10px] font-black uppercase tracking-stately text-white/60 mt-2">
+                            <div class="flex items-center gap-2 whitespace-nowrap">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></span>
+                                Alto Impacto Social
+                            </div>
+                            <div class="flex items-center gap-2 whitespace-nowrap">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></span>
+                                Proyecto Escalable
+                            </div>
+                            <div class="flex items-center gap-2 whitespace-nowrap">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></span>
+                                Mecenazgo Institucional
+                            </div>
+                        </div>>
+                    </div>
+                </div>
+
+                <!-- Bloque Derecho: Alianza Visual (DESNUDA Y GIGANTE) -->
+                <div class="flex flex-col items-center justify-center gap-12 md:gap-16 mt-16 lg:mt-0">
+                    <!-- Logo Hygeia Gigante (Aumentado y centrado) -->
+                    <img src="./logos/logo_hygeia.png" alt="Hygeia Hub" class="h-32 md:h-40 lg:h-56 w-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/400x150/transparent/ffffff?text=Hygeia'">
+                    
+                    <!-- Logo MHI Gigante (Centrado en su eje) -->
+                    <img src="./logos/logo_MHI.png" alt="Movimiento Hipocrático" class="h-24 md:h-28 lg:h-40 w-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/400x150/transparent/ffffff?text=MHI'">
+                </div>
+                
+            </div>
+        </section>    </main>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-surface text-primary">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12">
+            <div class="space-y-4 text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-4 mb-4">
+                    <img src="./logos/logo_hygeia.png" alt="Hygeia" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/400x150/transparent/001e40?text=Hygeia'">
+                </div>
+                <p class="text-[9px] font-black uppercase tracking-[0.4em] text-outline leading-loose">
+                    © 2026 Madrid — Barcelona <br>
+                    Hygeia Learning Hub & Movimiento Hipocrático
+                </p>
+            </div>
+            
+            <div class="flex flex-col items-center text-center gap-6">
+                <div class="flex items-center gap-4">
+                    <img src="./logos/logo_MHI.png" alt="MHI" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/400x150/transparent/001e40?text=MHI'">
+                </div>
+                <p class="text-[8px] font-bold uppercase tracking-[0.2em] text-outline">
+                    Para alianzas internacionales: <br>
+                    <a href="mailto:institucional@hygeiahub.org" class="text-primary hover:text-secondary mt-2 block underline">institucional@hygeiahub.org</a>
+                </p>
+            </div>
+
+            <div class="flex gap-10 text-[10px] font-black uppercase tracking-stately text-primary/60">
+                <a href="#" class="hover:text-secondary transition-colors">Aviso Legal</a>
+                <a href="#" class="hover:text-secondary transition-colors">Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+	
+        // Smooth Reveal Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+        // Accordion Logic
+        function toggleAccordion(button) {
+            const item = button.parentElement;
+            const content = item.querySelector('.accordion-content');
+            const isActive = item.classList.contains('active');
+
+            // Close all other accordions
+            document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.accordion-content').style.maxHeight = null;
+            });
+
+            // Toggle current
+            if (!isActive) {
+                item.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+
+        // Header Scroll Toggle
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('glass-nav');
+                nav.classList.remove('bg-transparent');
+            } else {
+                // nav.classList.remove('glass-nav');
+            }
+        });
+    </script>
+	
+	<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    
+    <style>
+      /* MAQUILLAJE CORPORATIVO FORZADO EN LA LANDING */
+      :root {
+        --chat--color--primary: #001e40; /* Navy Authority */
+        --chat--color--primary-shade-50: #003366; 
+        --chat--color--primary--shade-100: #004080; 
+        --chat--color--secondary: #00668a; /* Action Blue */
+        --chat--color-secondary-shade-50: #0081ae; 
+        --chat--color-white: #ffffff;
+        --chat--color-light: #f7f9fb; 
+        --chat--color-dark: #191c1e; 
+        --chat--toggle--background: #001e40; /* Fondo de la burbuja */
+        --chat--toggle--color: #ffffff; /* Icono de la burbuja */
+      }
+      .chat-window {
+        box-shadow: 0 10px 25px rgba(0, 30, 64, 0.15) !important;
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+
+    <script type="module">
+      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+      createChat({
+        webhookUrl: 'https://n8n.asklepiosdat.com/webhook/3d6d6484-11a5-4e80-8e47-426ce6e1fbb2/chat',
+        initialMessages: [
+            '¡Hola! Soy el Asesor Académico de Hygieia Learning Hub.',
+            '¿Puedo ayudarte a explorar el programa o nuestras opciones de mecenazgo para hospitales?'
+        ],
+        i18n: {
+            en: {
+                title: 'Hygieia Learning Hub', /* Adiós al Hi There 👋 */
+                subtitle: 'Asesoría Académica Institucional', /* Subtítulo profesional */
+                getStarted: 'Nueva conversación', /* Botón de inicio */
+                chatInput: { 
+                    placeholder: 'Escribe tu consulta aquí...' 
+                }
+            }
+        }
+      });
+    </script>
+</body>
+</html>
