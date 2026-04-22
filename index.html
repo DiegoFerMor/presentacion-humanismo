@@ -45,6 +45,22 @@
     </script>
 
     <link rel="stylesheet" href="css/estilos.css">
+    
+    <style>
+        /* Clases auxiliares para los modales */
+        .modal-active {
+            overflow: hidden; /* Evita el scroll del body cuando el modal está abierto */
+        }
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .modal.open {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
 </head>
 <body class="bg-surface text-on-surface">
 
@@ -643,11 +659,115 @@
             </div>
 
             <div class="flex gap-10 text-[10px] font-black uppercase tracking-stately text-primary/60">
-                <a href="#" class="hover:text-secondary transition-colors">Aviso Legal</a>
-                <a href="#" class="hover:text-secondary transition-colors">Privacidad</a>
+                <button onclick="openModal('modal-aviso')" class="hover:text-secondary transition-colors cursor-pointer uppercase">Aviso Legal</button>
+                <button onclick="openModal('modal-privacidad')" class="hover:text-secondary transition-colors cursor-pointer uppercase">Privacidad</button>
             </div>
         </div>
     </footer>
+
+    <!-- MODALES DE LEGAL Y PRIVACIDAD -->
+    
+    <!-- Modal Aviso Legal -->
+    <div id="modal-aviso" class="modal fixed inset-0 z-[100] flex items-center justify-center">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-primary/90 backdrop-blur-sm cursor-pointer" onclick="closeModal('modal-aviso')"></div>
+        
+        <!-- Modal Content -->
+        <div class="bg-surface relative z-10 w-full max-w-3xl max-h-[85vh] rounded-2xl shadow-2xl flex flex-col mx-4 overflow-hidden border border-outline/20">
+            <!-- Header Modal -->
+            <div class="flex justify-between items-center p-6 border-b border-outline/10 bg-white">
+                <h2 class="text-xl font-bold text-primary font-headline">Aviso Legal</h2>
+                <button onclick="closeModal('modal-aviso')" class="text-outline hover:text-secondary transition-colors">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            
+            <!-- Body Modal -->
+            <div class="p-8 overflow-y-auto font-body text-sm text-on-surface/80 space-y-6">
+                <div class="prose prose-sm max-w-none prose-headings:text-primary prose-a:text-secondary">
+                    <p class="font-bold text-primary">Información General</p>
+                    <p>En cumplimiento de lo dispuesto en la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE), se informa de que el presente sitio web tiene carácter corporativo, institucional y estrictamente informativo.</p>
+                    
+                    <p class="font-bold text-primary mt-6">Titular del Sitio</p>
+                    <p>HYGEIA LEARNING HUB, SL</p>
+                    <p>NIF/CIF: B26580704</p>
+                    <p>Domicilio social: C\ Capitan Arenas 22 1-3 08034 Barcelona</p>
+                    <p>Correo electrónico de contacto: info@hygeia.network</p>
+
+                    <p>El acceso, la navegación y el uso del sitio web atribuyen la condición de usuario e implican la aceptación plena del presente Aviso legal.</p>
+
+                    <p class="font-bold text-primary mt-6">Finalidad del sitio</p>
+                    <p>Este sitio web tiene como finalidad ofrecer información sobre la actividad de HG en el marco del desarrollo, impulso y comunicación de proyectos formativos de alto nivel, concebidos en colaboración con fundaciones, instituciones y otras entidades que aportan valor docente, académico e institucional, con una finalidad estrictamente informativa y no vinculante.</p>
+
+                    <p class="font-bold text-primary mt-6">Uso de los contenidos</p>
+                    <p>El usuario se compromete a realizar un uso adecuado, responsable y respetuoso de los contenidos del sitio web, de conformidad con la legislación vigente, la buena fe y los principios generales de convivencia digital.</p>
+                    
+                    <p class="font-bold text-primary mt-6">Propiedad intelectual y créditos de imagen</p>
+                    <p>Todos los contenidos del sitio web —incluidos textos, documentos, imágenes, elementos gráficos, diseño y estructura— son titularidad de HG o se utilizan bajo las correspondientes licencias.</p>
+                    
+                    <p>HG vela activamente por el respeto de los derechos de autoría y licencia. Algunas imágenes pueden estar sujetas a licencias Creative Commons u otras similares y se encuentran debidamente acreditadas en la página de Atribuciones, accesible desde el pie de página del sitio web.</p>
+
+                    <p class="font-bold text-primary mt-6">Responsabilidad</p>
+                    <p>HG no se hace responsable de los daños y perjuicios derivados del uso de la información contenida en este sitio web, ni de posibles errores, omisiones o contenidos desactualizados.</p>
+
+                    <p class="font-bold text-primary mt-6">Legislación aplicable</p>
+                    <p>El presente Aviso legal se rige por la legislación española vigente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Privacidad -->
+    <div id="modal-privacidad" class="modal fixed inset-0 z-[100] flex items-center justify-center">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-primary/90 backdrop-blur-sm cursor-pointer" onclick="closeModal('modal-privacidad')"></div>
+        
+        <!-- Modal Content -->
+        <div class="bg-surface relative z-10 w-full max-w-3xl max-h-[85vh] rounded-2xl shadow-2xl flex flex-col mx-4 overflow-hidden border border-outline/20">
+            <!-- Header Modal -->
+            <div class="flex justify-between items-center p-6 border-b border-outline/10 bg-white">
+                <h2 class="text-xl font-bold text-primary font-headline">Política de Privacidad</h2>
+                <button onclick="closeModal('modal-privacidad')" class="text-outline hover:text-secondary transition-colors">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            
+            <!-- Body Modal -->
+            <div class="p-8 overflow-y-auto font-body text-sm text-on-surface/80 space-y-6">
+                <div class="prose prose-sm max-w-none prose-headings:text-primary prose-a:text-secondary">
+                    <p class="font-bold text-primary">Información General</p>
+                    <p>HLH vela por la protección de la privacidad y por el tratamiento responsable de los datos personales, de conformidad con el Reglamento (UE) 2016/679 (RGPD) y la normativa vigente en materia de protección de datos.</p>
+ 
+                    <p class="font-bold text-primary mt-6">Titular del Sitio</p>
+                    <p>HYGEIA LEARNING HUB, SL</p>
+                    <p>NIF/CIF: B26580704</p>
+                    <p>Domicilio social: C\ Capitan Arenas 22 1-3 08034 Barcelona</p>
+                    <p>Correo electrónico de contacto: info@hygeia.network</p>
+
+                    <p class="font-bold text-primary mt-6">Datos personales</p>
+                    <p>Este sitio web puede recoger datos personales exclusivamente a través de formularios de contacto o mediante comunicaciones electrónicas iniciadas voluntariamente por el usuario. Los datos recogidos son los estrictamente necesarios para atender consultas de carácter institucional o profesional.</p>
+
+                    <p class="font-bold text-primary mt-6">Fianalidad del tratamiento</p>
+                    <p>Los datos personales se tratan únicamente para atender comunicaciones, facilitar información relacionada con las actividades y proyectos impulsados por HG y garantizar una relación institucional adecuada. En ningún caso se utilizarán con fines comerciales o publicitarios.</p>
+                    
+                    <p class="font-bold text-primary mt-6">Base legal</p>
+                    <p>La base legal del tratamiento es el consentimiento del usuario y, en su caso, el cumplimiento de obligaciones legales.</p>
+                    
+                    <p class="font-bold text-primary mt-6">Conservación de los datos</p>
+                    <p>Los datos personales se conservarán durante el tiempo estrictamente necesario para cumplir la finalidad para la que fueron recabados.</p>
+
+                    <p class="font-bold text-primary mt-6">Destinatarios</p>
+                    <p>Los datos no serán cedidos a terceros, salvo obligación legal.</p>
+                    
+                    <p class="font-bold text-primary mt-6">Derechos del Usuario</p>
+                    <p>El usuario puede ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad mediante comunicación escrita dirigida al responsable del tratamiento.</p>
+
+                    <p class="font-bold text-primary mt-6">Medidas de seguridad</p>
+                    <p>HG aplica las medidas técnicas y organizativas adecuadas para garantizar la seguridad, integridad y confidencialidad de los datos personales.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script>
@@ -686,6 +806,29 @@
                 content.style.maxHeight = content.scrollHeight + "px";
             }
         }
+
+        // Modal Logic
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('open');
+            document.body.classList.add('modal-active');
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('open');
+            document.body.classList.remove('modal-active');
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                const openModals = document.querySelectorAll('.modal.open');
+                openModals.forEach(modal => {
+                    closeModal(modal.id);
+                });
+            }
+        });
 
         // Header Scroll Toggle
         const nav = document.querySelector('nav');
@@ -728,7 +871,7 @@
         webhookUrl: 'https://n8n.asklepiosdat.com/webhook/3d6d6484-11a5-4e80-8e47-426ce6e1fbb2/chat',
         initialMessages: [
             '¡Hola! Soy el Asesor Académico de Hygieia Learning Hub.',
-            '¿Por favor, en que puedo ayudarte?'
+            '¿Por favor en que puedo ayudarte?'
         ],
         i18n: {
             en: {
